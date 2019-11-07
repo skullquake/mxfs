@@ -1,0 +1,8 @@
+Buildfile: C:\Users\ockert\dev\mdx\proj\fs\mainline\deployment\build_core.xml
+
+clean:
+
+BUILD SUCCESSFUL
+Total time: 1 second
+
+
