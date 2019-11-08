@@ -18,6 +18,7 @@ public class File extends filesystem.proxies.Node
 	{
 		Name("Name"),
 		Path("Path"),
+		NodeType("NodeType"),
 		File_FileDocument("FileSystem.File_FileDocument"),
 		Node_Node("FileSystem.Node_Node");
 
@@ -82,7 +83,7 @@ public class File extends filesystem.proxies.Node
 	/**
 	 * @return value of File_FileDocument
 	 */
-	public final system.proxies.FileDocument getFile_FileDocument() throws com.mendix.core.CoreException
+	public final filesystem.proxies.FileDocument getFile_FileDocument() throws com.mendix.core.CoreException
 	{
 		return getFile_FileDocument(getContext());
 	}
@@ -91,12 +92,12 @@ public class File extends filesystem.proxies.Node
 	 * @param context
 	 * @return value of File_FileDocument
 	 */
-	public final system.proxies.FileDocument getFile_FileDocument(com.mendix.systemwideinterfaces.core.IContext context) throws com.mendix.core.CoreException
+	public final filesystem.proxies.FileDocument getFile_FileDocument(com.mendix.systemwideinterfaces.core.IContext context) throws com.mendix.core.CoreException
 	{
-		system.proxies.FileDocument result = null;
+		filesystem.proxies.FileDocument result = null;
 		com.mendix.systemwideinterfaces.core.IMendixIdentifier identifier = getMendixObject().getValue(context, MemberNames.File_FileDocument.toString());
 		if (identifier != null)
-			result = system.proxies.FileDocument.load(context, identifier);
+			result = filesystem.proxies.FileDocument.load(context, identifier);
 		return result;
 	}
 
@@ -104,7 +105,7 @@ public class File extends filesystem.proxies.Node
 	 * Set value of File_FileDocument
 	 * @param file_filedocument
 	 */
-	public final void setFile_FileDocument(system.proxies.FileDocument file_filedocument)
+	public final void setFile_FileDocument(filesystem.proxies.FileDocument file_filedocument)
 	{
 		setFile_FileDocument(getContext(), file_filedocument);
 	}
@@ -114,7 +115,7 @@ public class File extends filesystem.proxies.Node
 	 * @param context
 	 * @param file_filedocument
 	 */
-	public final void setFile_FileDocument(com.mendix.systemwideinterfaces.core.IContext context, system.proxies.FileDocument file_filedocument)
+	public final void setFile_FileDocument(com.mendix.systemwideinterfaces.core.IContext context, filesystem.proxies.FileDocument file_filedocument)
 	{
 		if (file_filedocument == null)
 			getMendixObject().setValue(context, MemberNames.File_FileDocument.toString(), null);

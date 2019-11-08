@@ -25,8 +25,7 @@ public class FileDocument
 		DeleteAfterDownload("DeleteAfterDownload"),
 		Contents("Contents"),
 		HasContents("HasContents"),
-		Size("Size"),
-		File_FileDocument("FileSystem.File_FileDocument");
+		Size("Size");
 
 		private java.lang.String metaName;
 
@@ -73,6 +72,9 @@ public class FileDocument
 	 */
 	public static system.proxies.FileDocument initialize(com.mendix.systemwideinterfaces.core.IContext context, com.mendix.systemwideinterfaces.core.IMendixObject mendixObject)
 	{
+		if (com.mendix.core.Core.isSubClassOf("FileSystem.FileDocument", mendixObject.getType()))
+			return filesystem.proxies.FileDocument.initialize(context, mendixObject);
+
 		if (com.mendix.core.Core.isSubClassOf("System.Image", mendixObject.getType()))
 			return system.proxies.Image.initialize(context, mendixObject);
 
@@ -333,49 +335,6 @@ public class FileDocument
 	public final void setSize(com.mendix.systemwideinterfaces.core.IContext context, java.lang.Long size)
 	{
 		getMendixObject().setValue(context, MemberNames.Size.toString(), size);
-	}
-
-	/**
-	 * @return value of File_FileDocument
-	 */
-	public final filesystem.proxies.File getFile_FileDocument() throws com.mendix.core.CoreException
-	{
-		return getFile_FileDocument(getContext());
-	}
-
-	/**
-	 * @param context
-	 * @return value of File_FileDocument
-	 */
-	public final filesystem.proxies.File getFile_FileDocument(com.mendix.systemwideinterfaces.core.IContext context) throws com.mendix.core.CoreException
-	{
-		filesystem.proxies.File result = null;
-		com.mendix.systemwideinterfaces.core.IMendixIdentifier identifier = getMendixObject().getValue(context, MemberNames.File_FileDocument.toString());
-		if (identifier != null)
-			result = filesystem.proxies.File.load(context, identifier);
-		return result;
-	}
-
-	/**
-	 * Set value of File_FileDocument
-	 * @param file_filedocument
-	 */
-	public final void setFile_FileDocument(filesystem.proxies.File file_filedocument)
-	{
-		setFile_FileDocument(getContext(), file_filedocument);
-	}
-
-	/**
-	 * Set value of File_FileDocument
-	 * @param context
-	 * @param file_filedocument
-	 */
-	public final void setFile_FileDocument(com.mendix.systemwideinterfaces.core.IContext context, filesystem.proxies.File file_filedocument)
-	{
-		if (file_filedocument == null)
-			getMendixObject().setValue(context, MemberNames.File_FileDocument.toString(), null);
-		else
-			getMendixObject().setValue(context, MemberNames.File_FileDocument.toString(), file_filedocument.getMendixObject().getId());
 	}
 
 	/**

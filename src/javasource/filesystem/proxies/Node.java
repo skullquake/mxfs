@@ -22,6 +22,7 @@ public class Node
 	{
 		Name("Name"),
 		Path("Path"),
+		NodeType("NodeType"),
 		Node_Node("FileSystem.Node_Node");
 
 		private java.lang.String metaName;
@@ -193,6 +194,50 @@ public class Node
 	public final void setPath(com.mendix.systemwideinterfaces.core.IContext context, java.lang.String path)
 	{
 		getMendixObject().setValue(context, MemberNames.Path.toString(), path);
+	}
+
+	/**
+	 * Set value of NodeType
+	 * @param nodetype
+	 */
+	public final filesystem.proxies.enum_nodetype getNodeType()
+	{
+		return getNodeType(getContext());
+	}
+
+	/**
+	 * @param context
+	 * @return value of NodeType
+	 */
+	public final filesystem.proxies.enum_nodetype getNodeType(com.mendix.systemwideinterfaces.core.IContext context)
+	{
+		Object obj = getMendixObject().getValue(context, MemberNames.NodeType.toString());
+		if (obj == null)
+			return null;
+
+		return filesystem.proxies.enum_nodetype.valueOf((java.lang.String) obj);
+	}
+
+	/**
+	 * Set value of NodeType
+	 * @param nodetype
+	 */
+	public final void setNodeType(filesystem.proxies.enum_nodetype nodetype)
+	{
+		setNodeType(getContext(), nodetype);
+	}
+
+	/**
+	 * Set value of NodeType
+	 * @param context
+	 * @param nodetype
+	 */
+	public final void setNodeType(com.mendix.systemwideinterfaces.core.IContext context, filesystem.proxies.enum_nodetype nodetype)
+	{
+		if (nodetype != null)
+			getMendixObject().setValue(context, MemberNames.NodeType.toString(), nodetype.toString());
+		else
+			getMendixObject().setValue(context, MemberNames.NodeType.toString(), null);
 	}
 
 	/**

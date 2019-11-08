@@ -18,6 +18,7 @@ public class Folder extends filesystem.proxies.Node
 	{
 		Name("Name"),
 		Path("Path"),
+		NodeType("NodeType"),
 		Node_Node("FileSystem.Node_Node");
 
 		private java.lang.String metaName;

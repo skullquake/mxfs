@@ -22,8 +22,7 @@ public class Image extends system.proxies.FileDocument
 		DeleteAfterDownload("DeleteAfterDownload"),
 		Contents("Contents"),
 		HasContents("HasContents"),
-		Size("Size"),
-		File_FileDocument("FileSystem.File_FileDocument");
+		Size("Size");
 
 		private java.lang.String metaName;
 

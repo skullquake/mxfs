@@ -15,6 +15,45 @@ import com.mendix.systemwideinterfaces.core.IMendixObject;
 public class Microflows
 {
 	// These are the microflows for the FileSystem module
+	public static boolean bco_file(IContext context, filesystem.proxies.Node _obj)
+	{
+		try
+		{
+			Map<java.lang.String, Object> params = new HashMap<java.lang.String, Object>();
+			params.put("obj", _obj == null ? null : _obj.getMendixObject());
+			return (java.lang.Boolean)Core.execute(context, "FileSystem.bco_file", params);
+		}
+		catch (CoreException e)
+		{
+			throw new MendixRuntimeException(e);
+		}
+	}
+	public static boolean bco_folder(IContext context, filesystem.proxies.Node _obj)
+	{
+		try
+		{
+			Map<java.lang.String, Object> params = new HashMap<java.lang.String, Object>();
+			params.put("obj", _obj == null ? null : _obj.getMendixObject());
+			return (java.lang.Boolean)Core.execute(context, "FileSystem.bco_folder", params);
+		}
+		catch (CoreException e)
+		{
+			throw new MendixRuntimeException(e);
+		}
+	}
+	public static boolean bco_node(IContext context, filesystem.proxies.Node _obj_node_cur)
+	{
+		try
+		{
+			Map<java.lang.String, Object> params = new HashMap<java.lang.String, Object>();
+			params.put("obj_node_cur", _obj_node_cur == null ? null : _obj_node_cur.getMendixObject());
+			return (java.lang.Boolean)Core.execute(context, "FileSystem.bco_node", params);
+		}
+		catch (CoreException e)
+		{
+			throw new MendixRuntimeException(e);
+		}
+	}
 	public static filesystem.proxies.File ds_file_child(IContext context, filesystem.proxies.Node _obj_node_parent)
 	{
 		try
@@ -77,13 +116,52 @@ public class Microflows
 			throw new MendixRuntimeException(e);
 		}
 	}
-	public static void ivk_file_addaschild(IContext context, filesystem.proxies.Node _obj_node_parent)
+	public static void ivk_file_addaschild_gui(IContext context, filesystem.proxies.Node _obj_node_parent)
 	{
 		try
 		{
 			Map<java.lang.String, Object> params = new HashMap<java.lang.String, Object>();
 			params.put("obj_node_parent", _obj_node_parent == null ? null : _obj_node_parent.getMendixObject());
-			Core.execute(context, "FileSystem.ivk_file_addaschild", params);
+			Core.execute(context, "FileSystem.ivk_file_addaschild_gui", params);
+		}
+		catch (CoreException e)
+		{
+			throw new MendixRuntimeException(e);
+		}
+	}
+	public static void ivk_file_edit(IContext context, filesystem.proxies.File _obj_file)
+	{
+		try
+		{
+			Map<java.lang.String, Object> params = new HashMap<java.lang.String, Object>();
+			params.put("obj_file", _obj_file == null ? null : _obj_file.getMendixObject());
+			Core.execute(context, "FileSystem.ivk_file_edit", params);
+		}
+		catch (CoreException e)
+		{
+			throw new MendixRuntimeException(e);
+		}
+	}
+	public static void ivk_file_save(IContext context, filesystem.proxies.File _obj_file)
+	{
+		try
+		{
+			Map<java.lang.String, Object> params = new HashMap<java.lang.String, Object>();
+			params.put("obj_file", _obj_file == null ? null : _obj_file.getMendixObject());
+			Core.execute(context, "FileSystem.ivk_file_save", params);
+		}
+		catch (CoreException e)
+		{
+			throw new MendixRuntimeException(e);
+		}
+	}
+	public static void ivk_file_save_gui(IContext context, filesystem.proxies.File _obj_file)
+	{
+		try
+		{
+			Map<java.lang.String, Object> params = new HashMap<java.lang.String, Object>();
+			params.put("obj_file", _obj_file == null ? null : _obj_file.getMendixObject());
+			Core.execute(context, "FileSystem.ivk_file_save_gui", params);
 		}
 		catch (CoreException e)
 		{
@@ -123,6 +201,19 @@ public class Microflows
 			Map<java.lang.String, Object> params = new HashMap<java.lang.String, Object>();
 			params.put("_obj_node", __obj_node == null ? null : __obj_node.getMendixObject());
 			Core.execute(context, "FileSystem.ivk_node_edit", params);
+		}
+		catch (CoreException e)
+		{
+			throw new MendixRuntimeException(e);
+		}
+	}
+	public static void ivk_node_enter(IContext context, filesystem.proxies.Node __obj_node)
+	{
+		try
+		{
+			Map<java.lang.String, Object> params = new HashMap<java.lang.String, Object>();
+			params.put("_obj_node", __obj_node == null ? null : __obj_node.getMendixObject());
+			Core.execute(context, "FileSystem.ivk_node_enter", params);
 		}
 		catch (CoreException e)
 		{

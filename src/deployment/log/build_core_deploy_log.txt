@@ -1,8 +1,8 @@
-Buildfile: C:\Users\ockert\dev\mdx\proj\fs\mainline\deployment\build_core.xml
+Buildfile: C:\Users\ockert\dev\mdx\proj\fs\mxfs\src\deployment\build_core.xml
 
 deploy:
-     [copy] Copying 46 files to C:\Users\ockert\dev\mdx\proj\fs\mainline\deployment
+     [copy] Copying 46 files to C:\Users\ockert\dev\mdx\proj\fs\mxfs\src\deployment
 
 BUILD SUCCESSFUL
-Total time: 3 seconds
+Total time: 4 seconds
 
