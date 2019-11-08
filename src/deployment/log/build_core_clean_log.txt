@@ -5,6 +5,6 @@ clean:
    [delete] Deleting directory C:\Users\ockert\dev\mdx\proj\fs\mxfs\src\deployment\run
 
 BUILD SUCCESSFUL
-Total time: 2 seconds
+Total time: 0 seconds
 
 

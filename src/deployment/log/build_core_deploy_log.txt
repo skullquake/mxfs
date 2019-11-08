@@ -4,5 +4,6 @@ deploy:
      [copy] Copying 46 files to C:\Users\ockert\dev\mdx\proj\fs\mxfs\src\deployment
 
 BUILD SUCCESSFUL
-Total time: 4 seconds
+Total time: 0 seconds
+
 

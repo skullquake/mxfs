@@ -1,12 +1,12 @@
 Buildfile: C:\Users\ockert\dev\mdx\proj\fs\mxfs\src\deployment\build_core.xml
 
 compile:
-    [javac] Compiling 2 source files to C:\Users\ockert\dev\mdx\proj\fs\mxfs\src\deployment\run\bin
+    [javac] Compiling 32 source files to C:\Users\ockert\dev\mdx\proj\fs\mxfs\src\deployment\run\bin
 
 package:
       [jar] Building jar: C:\Users\ockert\dev\mdx\proj\fs\mxfs\src\deployment\model\bundles\project.jar
 
 BUILD SUCCESSFUL
-Total time: 23 seconds
+Total time: 5 seconds
 
 
