@@ -15,7 +15,59 @@ import com.mendix.systemwideinterfaces.core.IMendixObject;
 public class Microflows
 {
 	// These are the microflows for the FileSystem module
-	public static boolean bco_file(IContext context, filesystem.proxies.Node _obj)
+	public static boolean acr_file(IContext context, filesystem.proxies.File _obj_node_cur)
+	{
+		try
+		{
+			Map<java.lang.String, Object> params = new HashMap<java.lang.String, Object>();
+			params.put("obj_node_cur", _obj_node_cur == null ? null : _obj_node_cur.getMendixObject());
+			return (java.lang.Boolean)Core.execute(context, "FileSystem.acr_file", params);
+		}
+		catch (CoreException e)
+		{
+			throw new MendixRuntimeException(e);
+		}
+	}
+	public static boolean acr_folder(IContext context, filesystem.proxies.Folder _obj_node_cur)
+	{
+		try
+		{
+			Map<java.lang.String, Object> params = new HashMap<java.lang.String, Object>();
+			params.put("obj_node_cur", _obj_node_cur == null ? null : _obj_node_cur.getMendixObject());
+			return (java.lang.Boolean)Core.execute(context, "FileSystem.acr_folder", params);
+		}
+		catch (CoreException e)
+		{
+			throw new MendixRuntimeException(e);
+		}
+	}
+	public static boolean acr_node(IContext context, filesystem.proxies.Node _obj_node_cur)
+	{
+		try
+		{
+			Map<java.lang.String, Object> params = new HashMap<java.lang.String, Object>();
+			params.put("obj_node_cur", _obj_node_cur == null ? null : _obj_node_cur.getMendixObject());
+			return (java.lang.Boolean)Core.execute(context, "FileSystem.acr_node", params);
+		}
+		catch (CoreException e)
+		{
+			throw new MendixRuntimeException(e);
+		}
+	}
+	public static boolean acr_symlink(IContext context, filesystem.proxies.SymLink _obj_node_cur)
+	{
+		try
+		{
+			Map<java.lang.String, Object> params = new HashMap<java.lang.String, Object>();
+			params.put("obj_node_cur", _obj_node_cur == null ? null : _obj_node_cur.getMendixObject());
+			return (java.lang.Boolean)Core.execute(context, "FileSystem.acr_symlink", params);
+		}
+		catch (CoreException e)
+		{
+			throw new MendixRuntimeException(e);
+		}
+	}
+	public static boolean bco_file(IContext context, filesystem.proxies.File _obj)
 	{
 		try
 		{
@@ -28,12 +80,12 @@ public class Microflows
 			throw new MendixRuntimeException(e);
 		}
 	}
-	public static boolean bco_folder(IContext context, filesystem.proxies.Node _obj)
+	public static boolean bco_folder(IContext context, filesystem.proxies.Folder _obj_cur)
 	{
 		try
 		{
 			Map<java.lang.String, Object> params = new HashMap<java.lang.String, Object>();
-			params.put("obj", _obj == null ? null : _obj.getMendixObject());
+			params.put("obj_cur", _obj_cur == null ? null : _obj_cur.getMendixObject());
 			return (java.lang.Boolean)Core.execute(context, "FileSystem.bco_folder", params);
 		}
 		catch (CoreException e)
@@ -48,6 +100,19 @@ public class Microflows
 			Map<java.lang.String, Object> params = new HashMap<java.lang.String, Object>();
 			params.put("obj_node_cur", _obj_node_cur == null ? null : _obj_node_cur.getMendixObject());
 			return (java.lang.Boolean)Core.execute(context, "FileSystem.bco_node", params);
+		}
+		catch (CoreException e)
+		{
+			throw new MendixRuntimeException(e);
+		}
+	}
+	public static boolean bco_symlink(IContext context, filesystem.proxies.SymLink _obj_node_cur)
+	{
+		try
+		{
+			Map<java.lang.String, Object> params = new HashMap<java.lang.String, Object>();
+			params.put("obj_node_cur", _obj_node_cur == null ? null : _obj_node_cur.getMendixObject());
+			return (java.lang.Boolean)Core.execute(context, "FileSystem.bco_symlink", params);
 		}
 		catch (CoreException e)
 		{

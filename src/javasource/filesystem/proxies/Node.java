@@ -76,6 +76,9 @@ public class Node
 		if (com.mendix.core.Core.isSubClassOf("FileSystem.Folder", mendixObject.getType()))
 			return filesystem.proxies.Folder.initialize(context, mendixObject);
 
+		if (com.mendix.core.Core.isSubClassOf("FileSystem.SymLink", mendixObject.getType()))
+			return filesystem.proxies.SymLink.initialize(context, mendixObject);
+
 		return new filesystem.proxies.Node(context, mendixObject);
 	}
 

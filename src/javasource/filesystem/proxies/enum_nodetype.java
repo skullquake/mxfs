@@ -8,7 +8,8 @@ public enum enum_nodetype
 {
 	node(new java.lang.String[][] { new java.lang.String[] { "en_US", "node" } }),
 	file(new java.lang.String[][] { new java.lang.String[] { "en_US", "file" } }),
-	folder(new java.lang.String[][] { new java.lang.String[] { "en_US", "folder" } });
+	folder(new java.lang.String[][] { new java.lang.String[] { "en_US", "folder" } }),
+	symlink(new java.lang.String[][] { new java.lang.String[] { "en_US", "symlink" } });
 
 	private java.util.Map<java.lang.String, java.lang.String> captions;
 
